@@ -1,0 +1,130 @@
+###############################################################################
+# Unreal Engine 常见忽略列表
+###############################################################################
+
+# 虚拟盘符或系统文件
+Thumbs.db
+Thumbs.db:encryptable
+*.DS_Store
+*.plist
+*.Spotlight-V100*
+*.Trashes
+desktop.ini
+
+# Visual Studio/Visual Studio Code 相关
+.vs/
+*.VC.db
+*.VC.opendb
+*.VC.VC.opendb
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.opensdf
+*.sdf
+*.ipch/
+*.pdb
+*.obj
+*.exe
+*.log
+*.app
+*.log~
+*.suo
+*.swp
+*.VC.db
+.vscode/
+.vscode/settings.json
+
+# JetBrains Rider/CLion 等
+.idea/
+*.ipr
+*.iws
+*.iml
+cmake-build-*/
+
+# Unreal Engine 临时和缓存文件夹
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+# 有时还会有以下文件夹视具体情况而定
+# DerivedDataBackend/
+
+# 各种构建产物（打包后输出）
+Build/Android/src/
+Build/Android/gradle/
+Build/HTML5/
+Build/IOS/Debug/
+Build/IOS/Release/
+Build/Linux/
+Build/Mac/
+Build/Windows/
+# 如果你有自定义打包输出文件夹，也一并忽略
+
+# UE4/UE5 Shader编译缓存
+*.pch
+*.pdb
+*.obj
+*.generated.h
+*.generated.cpp
+
+# 项目自动生成的 C++/Header 文件
+*.gen.cpp
+*.gen.h
+
+# UE4/UE5 自动生成的项目文件（如果你不想提交 .uproject.sln 等）
+*.sln
+*.xcodeproj
+*.xcworkspace
+*.code-workspace
+
+# 打包后的可执行文件
+*.exe
+*.dll
+*.dylib
+*.app
+*.apk
+*.ipa
+
+# 临时日志文件
+*.log
+*.log.*
+*.temp
+*.dump
+*.gz
+
+# 其他常见临时文件
+*.pid
+*.csv
+*.cache
+*.cl
+*.class
+
+# Optional: 如果使用 Perforce、SVN 等版本控制系统，可忽略它们的文件夹
+.p4ignore
+.p4config
+.p4s
+.svn/
+
+###############################################################################
+# 可选：如果你不想提交某些配置文件，可根据需要自行添加
+###############################################################################
+
+# 注：以下部分取决于团队工作流程，有些人会提交 DefaultGame.ini 等配置文件
+
+#Config/*.ini
+#Config/DefaultEditor.ini
+#Config/DefaultEngine.ini
+#Config/DefaultGame.ini
+#Config/DefaultInput.ini
+#Config/DefaultServerSettings.ini
+#Config/DefaultEditorPerProjectUserSettings.ini
+
+###############################################################################
+# 说明
+###############################################################################
+# 1. 以上列表是常见的 UE4/UE5 Git 忽略规则示例，可根据实际需要进行增删。
+# 2. 如果你的项目使用了特定的插件或平台，需要额外添加对应的忽略规则。
+# 3. 建议将所有的源资产 (.uasset, .umap, .cpp, .h, .ini 等) 提交到版本库，
+#    这样才可以在团队协作中正确地追踪和还原项目状态。
+###############################################################################
